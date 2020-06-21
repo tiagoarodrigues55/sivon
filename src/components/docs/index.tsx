@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Styles from './styles'
 
 
 const Docs: React.FC = () => {
@@ -27,7 +28,8 @@ const Docs: React.FC = () => {
   ])
   
   return (
-    <div>
+    <Styles>
+      <div id="privateDocs">
       <h3>Documentos privados</h3>
       <ul>
         {privateDocs.map(doc=>(
@@ -37,6 +39,8 @@ const Docs: React.FC = () => {
           </div>
         ))}
       </ul>
+      </div>
+      <div id="publicDocs">
       <h3>Documentos públicos</h3>
       <ul>
         {publicDocs.map(doc=>(
@@ -46,13 +50,15 @@ const Docs: React.FC = () => {
           </div>
         ))}
       </ul>
+      </div>
+   
       <a 
       target="_blank" 
       href="https://docs.google.com/document/d/1IYdNxLMLs4f1g2glrxRnS8hQPVVgDjjyB4tyUH4eB6Y/edit" 
       >
         Criar novo documento
         </a>
-    </div>
+    </Styles>
   )
 }
 

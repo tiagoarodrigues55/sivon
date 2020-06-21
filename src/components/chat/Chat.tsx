@@ -1,33 +1,54 @@
-import React, {useState, ChangeEvent, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
+import { link } from 'fs';
+import Li from './Li'
 
 interface Props{
-  contat: string
+  contat: string,
+  number: number,
+  Messages: Message[]
+}
+interface Message{
+    country: string,
+    messages: string[]
 }
 
-const Chat: React.FC<Props> = ({contat}) => {
+const Chat: React.FC<Props> = ({contat, number, Messages}) => {
   const [message, setMessage] = useState('')
-  const [messages, setMessages] = useState([''])
-
-  function handleMessage(event: ChangeEvent<HTMLInputElement>){
-    setMessage(event.target.value)
-  }
-  function sendMessage(){
-    const Messages = messages
-    Messages.push(message)
-    setMessages(Messages)
-    console.log(messages)
-  }
+  const [messages, setMessages] = useState<Message[]>([])
+  
   useEffect(()=>{
-    //renderizar as mensagens
-  }, [messages])
+    setMessages(Messages)
+  }, [Messages])
+  const sendMessage = useCallback((e) => {
+    e.preventDefault();
+    messages[number].messages.push(message)
+    const newMessage = messages
+    setMessages(newMessage)
+    setMessage('')
+  }, [message, messages, number]);
+
+  
+ if(!contat){
+   contat = 'Brasil'
+   number = 1
+ }
   return (
-    <div> 
-      {/* colocar dentro de um form para enviar com enter */}
+    <div id="chat"> 
+    {console.log(messages, Messages, number)}
       <section>
+        <form onSubmit={sendMessage}>
         <h2>{contat}</h2>
-        <div>Mensagens</div>
-        <input onChange={handleMessage} type="text"/>
-        <button onClick={sendMessage}>Enviar mensagem</button>
+        <div id="messages">
+          <ul>
+             
+             {messages[number] ? messages[number].messages.map(message=>(
+                <Li key={message}>{message}</Li>
+                  )): <li>Não rolou</li>}
+          </ul>
+          </div>
+        <input onChange={e => setMessage(e.target.value)} value={message} type="text"/>
+        {/* <button type="submit" >Enviar mensagem</button> */}
+        </form>
       </section>
     </div>
   )

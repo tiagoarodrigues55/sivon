@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import Styles from './styles'
 // import { Container } from './styles';
 
 const SpeechesList: React.FC = () => {
@@ -13,15 +13,17 @@ const SpeechesList: React.FC = () => {
     {position:5 ,flag:'icon', name: 'Geórgia'},
     {position:6 ,flag:'icon', name: 'Brasil'}
   ])
-  
+  const [buttonState, setButtonState] = useState('visible')
   const timeOfSpeech = 2
+  
 
   function handleSpeechList(){
-    //usar a lógica do theme switch para colocar um novo pais a lista
+    setDelegations([...delegations, {position: 7, flag: 'icon', name: 'Japão'}])
+    setButtonState('unvisible')
   }
   return(
-    <div>
-      <h2>{`Tempo dos discursos: ${timeOfSpeech} minutos`}</h2>
+    <Styles>
+
       <ul>
         {delegations.map(delegation=>(
           <div>
@@ -29,11 +31,10 @@ const SpeechesList: React.FC = () => {
             <span>{`faltam aproximadamente ${delegation.position * timeOfSpeech} minutos`}</span>
           </div>
         ))}
-        <li className="gambiarra" key={7}>Japão</li>
-        <span className="gambiarra">faltam aproximadamente 14 minutos</span>
+       
       </ul>
-      <button onClick={handleSpeechList} >Inscreva-se na lista</button>
-    </div>
+      <button id={buttonState} onClick={handleSpeechList}>Inscreva-se na lista</button>
+    </Styles>
   );
 }
 

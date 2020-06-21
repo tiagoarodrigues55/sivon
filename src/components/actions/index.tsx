@@ -1,5 +1,5 @@
 import React, {useState, FormEvent, ChangeEvent} from 'react';
-
+import Styles from './styles'
 // import { Container } from './styles';
 
 const Actions: React.FC = () => {
@@ -27,8 +27,8 @@ const Actions: React.FC = () => {
 
   function handleSubmit(event: FormEvent){
 
-    const {text} = formData
-    const action = selectedAction.action
+    // const {text} = formData
+    // const action = selectedAction.action
     alert(`${selectedAction.type} enviada com sucesso!`)
   }
   function handleInputChange(event: ChangeEvent<HTMLInputElement>){
@@ -41,7 +41,7 @@ const Actions: React.FC = () => {
     setSelectedAction({type, action})
   }
   return (
-  <div>
+  <Styles>
   <form onSubmit={handleSubmit}>
     <select className="moção" value={selectedAction.type==='moção'?selectedAction.action:''} onChange={handleSelectAction} id="moção">
     <option  value=''>Escolha um tipo de moção</option>
@@ -60,7 +60,7 @@ const Actions: React.FC = () => {
     <input type="text" onChange={handleInputChange} placeholder={placeholder}/>
     <button onClick={handleSubmit}>Enviar</button>
   </form>
-  </div>
+  </Styles>
   )
 }
 

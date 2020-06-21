@@ -8,7 +8,7 @@ interface Props{
 
 const OrganizeNew: React.FC<Props> = ({title, communicate}) => {
   return (
-    <div>
+    <div className="organize">
       <h1>{title}</h1>
       <h3>{communicate}</h3>
     </div>
