@@ -1,30 +1,25 @@
 import React, {useState} from 'react';
 import Styles from './styles'
+import {AiFillFileText} from "react-icons/ai";
 
 
 const Docs: React.FC = () => {
  
   const [privateDocs, setPrivateDocs] = useState([
     {name: 'Documento1', 
-    link: 'https://docs.google.com/document/d/1FYlvqzYqU8xQj-FQSFTdzIGH4hpxkZVzQhg6ewiwJQI/edit', 
-    icon: 'icone'},
+    link: 'https://docs.google.com/document/d/1FYlvqzYqU8xQj-FQSFTdzIGH4hpxkZVzQhg6ewiwJQI/edit'},
     {name: 'Documento2', 
-    link: 'https://docs.google.com/document/d/1FYlvqzYqU8xQj-FQSFTdzIGH4hpxkZVzQhg6ewiwJQI/edit', 
-    icon: 'icone'},
+    link: 'https://docs.google.com/document/d/1FYlvqzYqU8xQj-FQSFTdzIGH4hpxkZVzQhg6ewiwJQI/edit'},
     {name: 'Documento3', 
-    link: 'https://docs.google.com/document/d/1FYlvqzYqU8xQj-FQSFTdzIGH4hpxkZVzQhg6ewiwJQI/edit', 
-    icon: 'icone'}
+    link: 'https://docs.google.com/document/d/1FYlvqzYqU8xQj-FQSFTdzIGH4hpxkZVzQhg6ewiwJQI/edit'}
   ])
   const [publicDocs, setPublicDocs] = useState([
     {name: 'Documento1', 
-    link: 'https://docs.google.com/document/d/1FYlvqzYqU8xQj-FQSFTdzIGH4hpxkZVzQhg6ewiwJQI/edit', 
-    icon: 'icone'},
+    link: 'https://docs.google.com/document/d/1FYlvqzYqU8xQj-FQSFTdzIGH4hpxkZVzQhg6ewiwJQI/edit'},
     {name: 'Documento2', 
-    link: 'https://docs.google.com/document/d/1FYlvqzYqU8xQj-FQSFTdzIGH4hpxkZVzQhg6ewiwJQI/edit', 
-    icon: 'icone'},
+    link: 'https://docs.google.com/document/d/1FYlvqzYqU8xQj-FQSFTdzIGH4hpxkZVzQhg6ewiwJQI/edit'},
     {name: 'Documento3', 
-    link: 'https://docs.google.com/document/d/1FYlvqzYqU8xQj-FQSFTdzIGH4hpxkZVzQhg6ewiwJQI/edit', 
-    icon: 'icone'}
+    link: 'https://docs.google.com/document/d/1FYlvqzYqU8xQj-FQSFTdzIGH4hpxkZVzQhg6ewiwJQI/edit'}
   ])
   
   return (
@@ -33,9 +28,10 @@ const Docs: React.FC = () => {
       <h3>Documentos privados</h3>
       <ul>
         {privateDocs.map(doc=>(
-          <div>
-            <li>{doc.name}</li>
-            <a target="_blank" href={doc.link}>{doc.icon}</a>
+          <div className="doc">
+            <li>{doc.name}
+            <a target="_blank" href={doc.link}><AiFillFileText/></a>
+            </li>
           </div>
         ))}
       </ul>
@@ -44,9 +40,10 @@ const Docs: React.FC = () => {
       <h3>Documentos públicos</h3>
       <ul>
         {publicDocs.map(doc=>(
-          <div>
-            <li>{doc.name}</li>
-            <a target="_blank" href={doc.link}>{doc.icon}</a>
+          <div className="doc">
+            <li>{doc.name}
+            <a target="_blank" href={doc.link}><AiFillFileText/></a>
+            </li>
           </div>
         ))}
       </ul>
