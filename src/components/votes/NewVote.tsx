@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { NOMEM } from 'dns';
+import {AiFillFileText} from "react-icons/ai";
+
 
 // import { Container } from './styles';
 interface Props{
@@ -13,12 +14,12 @@ const NewVote: React.FC<Props> = ({status}) => {
   const [newVote, setNewVote] = useState({
     name: 'Votação a cerca da aprovação do documento1 por completo sem prejuizo de destaques',
     document: 'documento1',
+    link: 'https://docs.google.com/document/d/1FYlvqzYqU8xQj-FQSFTdzIGH4hpxkZVzQhg6ewiwJQI/edit'
   })
   return (
     <div id={status}>
       <h1>{newVote.name}</h1>
-      <h2>{newVote.document}</h2>
-      <span>icone com link</span>{/*Colocar um icone de arquivo com um link para o arquivo*/}
+      <h2>{newVote.document} <a target="_blank" rel="noopener noreferrer" href={newVote.link}><AiFillFileText/></a></h2>
       <button id="favorable" onClick={()=>{}} >A favor</button>
       <button id="against" onClick={()=>{}} >Contra</button>
       <button onClick={()=>{}} >Moção com precedência</button>

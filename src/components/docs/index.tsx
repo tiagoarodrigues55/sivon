@@ -30,7 +30,7 @@ const Docs: React.FC = () => {
         {privateDocs.map(doc=>(
           <div className="doc">
             <li>{doc.name}
-            <a target="_blank" href={doc.link}><AiFillFileText/></a>
+            <a target="_blank" rel="noopener noreferrer" href={doc.link}><AiFillFileText/></a>
             </li>
           </div>
         ))}
@@ -42,7 +42,7 @@ const Docs: React.FC = () => {
         {publicDocs.map(doc=>(
           <div className="doc">
             <li>{doc.name}
-            <a target="_blank" href={doc.link}><AiFillFileText/></a>
+            <a target="_blank" rel="noopener noreferrer" href={doc.link}><AiFillFileText/></a>
             </li>
           </div>
         ))}
@@ -51,6 +51,7 @@ const Docs: React.FC = () => {
    
       <a 
       target="_blank" 
+      rel="noopener noreferrer"
       href="https://docs.google.com/document/d/1IYdNxLMLs4f1g2glrxRnS8hQPVVgDjjyB4tyUH4eB6Y/edit" 
       >
         Criar novo documento
