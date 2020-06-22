@@ -5,6 +5,9 @@ export default styled.div`
 grid-area: SL;
 display: flex;
 flex-direction: column;
+border: solid 1px gray;
+margin:0;
+
 
 align-items: center;
 li{

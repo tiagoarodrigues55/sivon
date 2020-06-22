@@ -10,6 +10,8 @@ export default createGlobalStyle`
   }
   html, body, #root {
     height: 100%;
+    margin-bottom: 5px;
+
   }
   *, button, input {
     border: 0;

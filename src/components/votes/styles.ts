@@ -6,7 +6,9 @@ grid-area: VT;
 display: flex;
 align-items: center;
 flex-direction: column;
-margin-bottom:20px;
+border: solid 1px gray;
+margin:0;
+
 div#LastVote{
   display:flex;
 flex-direction: column;

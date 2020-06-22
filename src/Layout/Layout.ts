@@ -23,5 +23,6 @@ export const Grid = styled.div`
   'VT DC DC '
   
   ;
+  
   height: 100vh;
 `;

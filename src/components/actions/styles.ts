@@ -6,6 +6,9 @@ grid-area: AT;
 display: flex;
 align-items: top;
 margin-top:20px;
+border: solid 1px gray;
+margin:0;
+
 select{
   padding: 3px;
   background-color: #3f3f3f ;
