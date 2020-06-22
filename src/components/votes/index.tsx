@@ -15,7 +15,7 @@ const Votes: React.FC = () => {
     }
   }
   return (
-    <Styles>
+    <Styles className="components">
       <div id="button">
   <button onClick={handleVoteState} >{voteState.name}</button>
       </div>

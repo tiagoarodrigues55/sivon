@@ -18,7 +18,7 @@ const News: React.FC = () => {
     {title: 'Falta de decoro', communicate: 'A mesa reitera que todos os delegados mantenham o dresscode completo'}
   ])
   return (
-    <Styles>
+    <Styles className="components">
       {articles.map(article=>(
         <Article 
         title={article.title} 

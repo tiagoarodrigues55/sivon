@@ -41,7 +41,7 @@ const Actions: React.FC = () => {
     setSelectedAction({type, action})
   }
   return (
-  <Styles>
+  <Styles className="components">
   <form onSubmit={handleSubmit}>
     <select className="moção" value={selectedAction.type==='moção'?selectedAction.action:''} onChange={handleSelectAction} id="moção">
     <option  value=''>Escolha um tipo de moção</option>

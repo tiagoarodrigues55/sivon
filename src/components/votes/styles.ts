@@ -7,7 +7,6 @@ display: flex;
 align-items: center;
 flex-direction: column;
 border: solid 1px gray;
-margin:0;
 
 div#LastVote{
   display:flex;

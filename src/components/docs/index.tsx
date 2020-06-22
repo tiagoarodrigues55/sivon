@@ -23,7 +23,7 @@ const Docs: React.FC = () => {
   ])
   
   return (
-    <Styles>
+    <Styles className="components">
       <div id="privateDocs">
       <h3>Documentos privados</h3>
       <ul>

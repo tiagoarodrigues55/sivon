@@ -5,7 +5,6 @@ export default styled.div`
 grid-area: NS;
 display: flex;
 flex-direction: column;
-
     border: solid 1px gray;
   
 h1{

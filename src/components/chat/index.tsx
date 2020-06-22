@@ -43,7 +43,7 @@ const Chats: React.FC = () => {
   },[])
 
   return (
-    <Styles>
+    <Styles className="components">
       <ul>
       {contats.map(contat=>(
         <li onClick={()=>renderContat(contat)} key={contat}>{contat}</li>

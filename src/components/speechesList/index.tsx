@@ -22,7 +22,7 @@ const SpeechesList: React.FC = () => {
     setButtonState('unvisible')
   }
   return(
-    <Styles>
+    <Styles className="components">
 
       <ul>
         {delegations.map(delegation=>(

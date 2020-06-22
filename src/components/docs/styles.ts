@@ -6,7 +6,6 @@ grid-area: DC;
 display: flex;
 align-items: center;
 border: solid 1px gray;
-margin:0;
 div{
   margin-right:30px;
 }

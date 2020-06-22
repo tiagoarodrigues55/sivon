@@ -13,6 +13,9 @@ export default createGlobalStyle`
     margin-bottom: 5px;
 
   }
+  div.components{
+    background-color:#ADD8E6;
+  }
   *, button, input {
     border: 0;
     outline: 0;

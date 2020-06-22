@@ -7,7 +7,7 @@ import Styles from './styles'
 const Video = () =>{
  
   return (
-    <Styles>
+    <Styles className="components">
       <img src={mujica} alt="mujica"/>
       <button>Aplausos virtuais</button>{/*Achar uma biblioteca para isso! */}
     </Styles>

@@ -7,6 +7,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 
+
 button{
   width:25%;
   height:10%; 
