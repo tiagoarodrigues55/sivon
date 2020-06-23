@@ -1,3 +1,23 @@
+
+
+#SivOn
+
+Esse é um projeto, AINDA EM DESENVOLVIMENTO, que está no inicio, mas tem como objetivo concentrar toda a experiência de uma simuação (modelo MUN) em um único ambiente. Os elementos estão dispostos de maneira estática, como uma espécie de preview, futuramente atualizações surgirão.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
