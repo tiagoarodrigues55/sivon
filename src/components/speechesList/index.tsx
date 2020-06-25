@@ -23,16 +23,20 @@ const SpeechesList: React.FC = () => {
   }
   return(
     <Styles className="components">
-
+      <div id="speechesList">
       <ul>
         {delegations.map(delegation=>(
-          <div>
+          <div className="box">
             <li key={delegation.position}>{delegation.name}</li>
             <span>{`faltam aproximadamente ${delegation.position * timeOfSpeech} minutos`}</span>
+            <div className="separator"></div>
+
           </div>
         ))}
        
       </ul>
+      </div>
+     
       <button id={buttonState} onClick={handleSpeechList}>Inscreva-se na lista</button>
     </Styles>
   );

@@ -2,11 +2,12 @@ import styled from 'styled-components'
 
 
 export default styled.div`
+/* background-color: var(--primary); */
 grid-area: VT;
 display: flex;
 align-items: center;
 flex-direction: column;
-border: solid 1px gray;
+/* border: solid 1px gray; */
 
 div#LastVote{
   display:flex;

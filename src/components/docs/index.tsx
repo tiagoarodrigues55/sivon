@@ -48,14 +48,18 @@ const Docs: React.FC = () => {
         ))}
       </ul>
       </div>
-   
-      <a 
+          <div 
+      id="createDoc"
+      >
+<a 
       target="_blank" 
       rel="noopener noreferrer"
       href="https://docs.google.com/document/d/1IYdNxLMLs4f1g2glrxRnS8hQPVVgDjjyB4tyUH4eB6Y/edit" 
       >
         Criar novo documento
         </a>
+          </div>
+      
     </Styles>
   )
 }

@@ -6,7 +6,7 @@ grid-area: VD;
 display: flex;
 flex-direction: column;
 align-items: center;
-
+/* background-color:var(--quaternary); */
 
 button{
   width:25%;

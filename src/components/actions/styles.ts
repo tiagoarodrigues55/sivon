@@ -6,18 +6,20 @@ grid-area: AT;
 display: flex;
 align-items: top;
 margin-top:20px;
-border: solid 1px gray;
-
+/* border: solid 1px gray; */
+/* background-color:var(--tertiary); */
 select{
   padding: 3px;
-  background-color: #3f3f3f ;
+  background-color: var(--secondary) ;
   margin-right: 3px;
+  border-radius:5px;
 }
 input{
   width:98%;
   padding:5px;
+  /* background-color:var(--tertiary); */
   margin-top: 3px;
-  border-radius:2px;
+  border-radius:5px;
   border: solid 1px black;
 }
 

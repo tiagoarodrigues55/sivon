@@ -58,7 +58,6 @@ const Actions: React.FC = () => {
     ))}
     </select>
     <input type="text" onChange={handleInputChange} placeholder={placeholder}/>
-    <button onClick={handleSubmit}>Enviar</button>
   </form>
   </Styles>
   )

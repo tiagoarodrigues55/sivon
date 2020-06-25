@@ -5,6 +5,7 @@ export default styled.div`
 grid-area: CH;
 display: flex;
 align-items: center;
+/* background-color: var(--primary); */
   ul{
     display: flex;
     float: right;
@@ -14,9 +15,9 @@ align-items: center;
     list-style: none;
   }
 div#chat{
+  margin:0;
   height: 100%;
-  width: 70%;
-
+  width: 100%;
   h2{
     text-align: center;
   width:100%;
@@ -25,8 +26,10 @@ border:solid 1px black;
   }
 }
 section{
+  /* background-color: var(--secondary); */
+  margin:0;
   border: solid 1px black;
-  height: 100%;
+  height: 98%;
   border-radius: 2px;
   width: 100%;
 }
@@ -36,14 +39,26 @@ form{
 }
 
 div#messages{
-  height: 70%;
+  height: 77%;
+  overflow-y: scroll;
+  ::-webkit-scrollbar { /* Sem Barra de rolagem */
+    display: none;
+  }
 }
 input{
+  /* background-color: var(--tertiary); */
+
   align-self:baseline;
-  width:96%;
+  width:97%;
   padding:5px;
   border-radius:2px;
   border: solid 1px black;
-  margin-bottom: 5px;
+}
+div#contats{
+  max-height:250px;
+  overflow-y: scroll;
+  ::-webkit-scrollbar { /* Sem Barra de rolagem */
+    display: none;
+  }
 }
 `

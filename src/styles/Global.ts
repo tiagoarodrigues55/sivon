@@ -3,29 +3,30 @@ import {createGlobalStyle} from 'styled-components'
 export default createGlobalStyle`
   * {
     margin: 0;
-    margin-left: 5px;
-    margin-top: 5px;
     padding: 0;
     box-sizing: border-box;
+  }
+  *:not(body){
+    margin-left: 5px;
   }
   html, body, #root {
     height: 100%;
     margin-bottom: 5px;
-
+    background-color: #F0FFFF;
   }
   div.components{
-    background-color:#ADD8E6;
+    margin:0;
   }
   *, button, input {
     border: 0;
     outline: 0;
-    font-family:  sans-serif;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
   }
  
   :root {
     --primary: #36393f;
-    --secondary: #2f3136;
-    --tertiary: rgb(32,34,37);
+    --secondary: #6495ED;
+    --tertiary: #5F9EA0;
     --quaternary: #292b2f;
     --quinary: #393d42;
     --senary: #828386;
@@ -41,4 +42,23 @@ export default createGlobalStyle`
     --link: #5d80d6;
     --rocketseat: #6633cc;
   }
+  /* :root {
+    --primary: #fff;
+    --secondary: #fff;
+    --tertiary: #fff
+    --quaternary: #fff;
+    --quinary: #fff;
+    --senary: #fff;
+    
+    --white: #fff;
+    --gray: #fff;
+    --chat-input: #fff
+    --symbol: #fff;
+    --notification: #fff;
+    --discord: #fff;
+    --mention-detail: #fff;
+    --mention-message: #fff;
+    --link: #fff;
+    --rocketseat: #fff;
+  } */
 `;

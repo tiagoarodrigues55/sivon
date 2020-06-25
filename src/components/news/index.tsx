@@ -20,12 +20,22 @@ const News: React.FC = () => {
   return (
     <Styles className="components">
       {articles.map(article=>(
+        <div className="article">
         <Article 
         title={article.title} 
         introduction={article.introduction} />
+
+        <div className="separator"></div>
+        </div>
+       
       ))}
       {organizeNews.map(organizeNew=>(
+        <div id="mesa" className="article">
         <OrganizeNew title={organizeNew.title} communicate={organizeNew.communicate} />
+        <div className="separator"></div>
+        </div>
+
+
       ))}
     </Styles>
   )

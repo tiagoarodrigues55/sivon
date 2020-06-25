@@ -2,13 +2,15 @@ import React, {useState, useEffect} from 'react';
 import Chat from './Chat'
 import Styles from './styles'
 
-// import { Container } from './styles';
+
+
 interface Message{
   country: string,
   messages: string[]
 }
 const Chats: React.FC = () => {
   const [contats, setContats] = useState([
+    "diário",
     'Argentina',
     'Brasil',
     'Estados Unidos',
@@ -44,11 +46,18 @@ const Chats: React.FC = () => {
 
   return (
     <Styles className="components">
+      <div id="contats">
       <ul>
       {contats.map(contat=>(
+        <div className="contat">
+
         <li onClick={()=>renderContat(contat)} key={contat}>{contat}</li>
+        </div>
+     
       ))}
       </ul>
+      </div>
+      
       <Chat Messages={messages} contat={contat} number={contats.indexOf(contat)} />
     </Styles>
   )

@@ -13,13 +13,13 @@ import styled from 'styled-components'
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: 520px auto 540px ;
-  grid-template-rows: 240px 110px 170px auto;
+  grid-template-rows: 240px 120px 160px auto;
   grid-template-areas:
    
   
-  'VD SL NS '
   'VD SL CH '
-  'AT SL CH '
+  'VD SL CH '
+  'AT NS NS '
   'VT DC DC '
   
   ;
