@@ -29,5 +29,18 @@ button{
   height:18%; 
   align-self: flex-start
 }
+div{
+  width:500px;
+  height:130px;
+  padding:2px;
+  margin:2px;
+  border: 1px black solid;
+}
+ul{
+  margin-left:15px;
+}
+li{
+  margin:8px;
+}
 
 `

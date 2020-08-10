@@ -1,8 +1,10 @@
 import React, {useState, FormEvent, ChangeEvent} from 'react';
 import Styles from './styles'
 // import { Container } from './styles';
-
-const Actions: React.FC = () => {
+interface Props{
+  moderator?: boolean
+}
+const Actions: React.FC<Props> = ({moderator}) => {
   // Dois selects, um com as questões e outro com as moções
   // caixa de texto
   // botão de envio
@@ -39,6 +41,20 @@ const Actions: React.FC = () => {
     const action = event.target.value
     const type = event.target.className
     setSelectedAction({type, action})
+  }
+  if (moderator){
+    return (
+      <Styles className="components">
+        <div>
+          <ul>
+            <li>Moção para adiamento da sessão - Brasil</li>
+            <li>Questão de privilégio pessoal - Japão</li>
+            <li>Questão de dúvida - Nigéria</li>
+            <li>Moção para abertura da lista - Estônia</li>
+          </ul>
+        </div>
+      </Styles>
+      )
   }
   return (
   <Styles className="components">

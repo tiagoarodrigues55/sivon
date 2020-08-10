@@ -4,9 +4,10 @@ import {AiFillFileText} from "react-icons/ai";
 
 // import { Container } from './styles';
 interface Props{
-  status: string
+  status: string,
+  moderator?: boolean
 }
-const NewVote: React.FC<Props> = ({status}) => {
+const NewVote: React.FC<Props> = ({status, moderator}) => {
   // nome 
   // documento em questão 
   // botoões com as opções
@@ -16,6 +17,18 @@ const NewVote: React.FC<Props> = ({status}) => {
     document: 'documento1',
     link: 'https://docs.google.com/document/d/1FYlvqzYqU8xQj-FQSFTdzIGH4hpxkZVzQhg6ewiwJQI/edit'
   })
+  if(moderator){
+    return (
+      <div id={status}>
+      <form>
+        <input placeholder="Título" type="text"/>
+        <input placeholder="descrição" type="text"/>
+        <input  type="file"/>
+      </form>
+      </div>
+    
+    )
+  }
   return (
     <div id={status}>
       <h1>{newVote.name}</h1>

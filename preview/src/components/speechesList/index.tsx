@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import Styles from './styles'
 // import { Container } from './styles';
-
-const SpeechesList: React.FC = () => {
+interface Props{
+  moderator?: boolean
+}
+const SpeechesList: React.FC<Props> = ({moderator}) => {
   //lista com nomes estáticos + tempo estimado
   //botão para inscrição + tempo estimado
   const [delegations, setDelegations] = useState([
@@ -20,6 +22,26 @@ const SpeechesList: React.FC = () => {
   function handleSpeechList(){
     setDelegations([...delegations, {position: 7, flag: 'icon', name: 'Japão'}])
     setButtonState('unvisible')
+  }
+  if(moderator){
+    return(
+      <Styles className="components">
+        <div id="speechesList">
+        <ul>
+          {delegations.map(delegation=>(
+            <div className="box">
+              <li key={delegation.position}>{delegation.name}</li>
+              <span>{`faltam aproximadamente ${delegation.position * timeOfSpeech} minutos`}</span>
+              <div className="separator"></div>
+  
+            </div>
+          ))}
+         
+        </ul>
+        </div>
+       
+      </Styles>
+    );
   }
   return(
     <Styles className="components">

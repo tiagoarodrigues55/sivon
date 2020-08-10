@@ -7,11 +7,20 @@ display: flex;
 flex-direction: column;
 align-items: center;
 /* background-color:var(--quaternary); */
-
-button{
-  width:25%;
-  height:10%; 
-  align-self: flex-start
+img{
+  width:90%; 
+  height:90%;
 }
+div{
+display:flex;
+flex-direction: row;
+button{
+height:30px;
+background:#4444df;
+padding:3px;
+  /* align-self: flex-start */
+}
+}
+
 
 `

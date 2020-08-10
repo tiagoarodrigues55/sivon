@@ -1,16 +1,13 @@
 import React from 'react';
 
-import Layout from './Layout'
-// import Teste from './Testes.js'
 import Global from './styles/Global'
-import Modal from './Modal'
+import Routes from './routes'
 
 function App() {
   return (
     <div className="App">
       <Global/>
-     <Layout/>
-     {/* <Modal/> */}
+     <Routes/>
 
     </div>
   );

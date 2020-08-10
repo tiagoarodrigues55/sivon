@@ -3,8 +3,10 @@ import Article from './Article'
 import OrganizeNew from './OrganizeNew'
 import Styles from './styles'
 
-
-const News: React.FC = () => {
+interface Props{
+  moderator?: boolean
+}
+const News: React.FC<Props> = ({moderator}) => {
   //feed com notícias estáticas (iframe)
   //anúncios fixados da mesa
   const [articles, setArticles] = useState([
@@ -17,6 +19,30 @@ const News: React.FC = () => {
     {title: 'Coffee break', communicate: 'O coffee break será as 10:30'},
     {title: 'Falta de decoro', communicate: 'A mesa reitera que todos os delegados mantenham o dresscode completo'}
   ])
+  if(moderator){
+    return (
+      <Styles className="components">
+        {articles.map(article=>(
+          <div className="article">
+          <Article 
+          title={article.title} 
+          introduction={article.introduction} />
+  
+          <div className="separator"></div>
+          </div>
+         
+        ))}
+        {organizeNews.map(organizeNew=>(
+          <div id="mesa" className="article">
+          <OrganizeNew title={organizeNew.title} communicate={organizeNew.communicate} />
+          <div className="separator"></div>
+          </div>
+  
+  
+        ))}
+      </Styles>
+    )
+  }
   return (
     <Styles className="components">
       {articles.map(article=>(
